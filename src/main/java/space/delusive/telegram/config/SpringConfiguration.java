@@ -1,15 +1,13 @@
 package space.delusive.telegram.config;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @Import(WebMvcConfiguration.class)
 @PropertySource("classpath:application.properties")
+@ComponentScan("space.delusive.telegram")
 public class SpringConfiguration {
     @Bean
     public RestTemplate restTemplate() {
