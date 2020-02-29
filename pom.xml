@@ -15,7 +15,6 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <telegrambots.version>4.6</telegrambots.version>
         <spring.version>5.2.3.RELEASE</spring.version>
         <lombok.version>1.18.12</lombok.version>
         <servlet-api.version>4.0.1</servlet-api.version>
@@ -23,11 +22,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.telegram</groupId>
-            <artifactId>telegrambots</artifactId>
-            <version>${telegrambots.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
