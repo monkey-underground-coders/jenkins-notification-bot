@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @Import(WebMvcConfiguration.class)
-@PropertySource("classpath:application.properties")
+@PropertySource(value = "classpath:application.properties", encoding = "UTF-8")
 @ComponentScan("space.delusive.telegram")
 public class SpringConfiguration {
     @Bean
@@ -23,4 +23,16 @@ public class SpringConfiguration {
     public String botToken(@Value("${bot.token}") String botToken) {
         return botToken;
     }
+
+    @Bean
+    public String targetChatId(@Value("${bot.target.chat.id}") String targetChatId) {
+        return targetChatId;
+    }
+
+    @Bean
+    public String messagePattern(@Value("${message.pattern}") String messagePattern) {
+        return messagePattern;
+    }
+
+
 }
