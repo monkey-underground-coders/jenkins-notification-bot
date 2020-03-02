@@ -9,10 +9,6 @@ import org.springframework.web.client.RestTemplate;
 @PropertySource(value = "classpath:application.properties", encoding = "UTF-8")
 @ComponentScan("space.delusive.telegram")
 public class SpringConfiguration {
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 
     @Bean
     public String sendMessageUrl(@Value("${bot.url.send.message}") String sendMessageUrl) {
