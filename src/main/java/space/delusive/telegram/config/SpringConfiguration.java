@@ -2,7 +2,6 @@ package space.delusive.telegram.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
-import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @Import(WebMvcConfiguration.class)
@@ -30,5 +29,9 @@ public class SpringConfiguration {
         return messagePattern;
     }
 
+    @Bean
+    public String secret(@Value("${secret}") String secret) {
+        return secret;
+    }
 
 }
